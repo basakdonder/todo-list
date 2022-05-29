@@ -1,0 +1,92 @@
+.form-container {
+    width: 400px;
+    background-color: #fff;
+    min-height: 400px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    padding: 20px;
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #BCBCCD;
+    border-radius: 5px;
+    color: #4E4E80;
+}
+
+.fa-solid {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+
+.todo-list {
+    list-style: none;
+    margin: 10px 0;
+    height: 250px;
+    overflow-y: auto;
+}
+
+.todo-list .todo-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    appearance: none;
+    background-color: #fff;
+    font: inherit;
+    color: currentColor;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #4E4E80;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: #4E4E80;
+    border-radius: 10px;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.todo-item .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-footer {
+    border-top: 1px solid #BCBCCD;
+    background-color: #fff;
+    display: flex;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    margin: 10px 0;
+}
+
+.hide {
+    display: none;
+}
+
+.checked {
+    text-decoration: line-through;
+}
